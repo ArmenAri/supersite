@@ -1,5 +1,5 @@
 /*
-*@author : Armen ARISTAKESYAN, Florian BOUCHUT
+*@author : Armen ARISTAKESYAN
 *@api : https://min-api.cryptocompare.com/
 *@request / sec : 0.5
 */

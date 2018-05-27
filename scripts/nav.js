@@ -1,3 +1,7 @@
+/*
+*@author : Armen ARISTAKESYAN
+*/
+
 function navButtonHaut() {
 	var x = document.getElementById("barreNavHaut");
 	if (x.className === "barreNavHaut") {

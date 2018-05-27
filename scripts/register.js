@@ -44,34 +44,34 @@ document.getElementById("firstname").addEventListener('input', checkInfos);
 document.getElementById("lastname").addEventListener('input', checkInfos);
 
 function checkInfos() {
-  var array = [getLastName(), getFirstName(), getUserName(), getPassword(), getEMail(), getBirthDate()];
-	  document.getElementById("firstname").style.color = 'green';
-	  document.getElementById("lastname").style.color = 'green';
-	  if(array[2].length < 6) {
-	  	document.getElementById("username").style.color = 'red';
+	var array = [getLastName(), getFirstName(), getUserName(), getPassword(), getEMail(), getBirthDate()];
+	document.getElementById("firstname").style.color = 'green';
+	document.getElementById("lastname").style.color = 'green';
+	if(array[2].length < 6) {
+		document.getElementById("username").style.color = 'red';
 		validUsername = false;
-	  } else {
+	} else {
 	    document.getElementById("username").style.color = 'green';
 	    validUsername = true;
-	  }
-	  if(regexPwd.test(array[3])){
+	}
+	if(regexPwd.test(array[3])){
 	    document.getElementById("userpwd").style.color = 'green';
-	     validPWD = true;
-	  } else {
+	    validPWD = true;
+	} else {
 	    document.getElementById("userpwd").style.color = 'red';
 	    validPWD = false;
-	  }
-	  if(regexMail.test(array[4])){
+	}
+	if(regexMail.test(array[4])){
 	    document.getElementById("useremail").style.color = 'green';
 	    validMail = true;
-	  } else {
+	} else {
 	    document.getElementById("useremail").style.color = 'red';
 	    validMail = false;
-	  }
+	}
 	  
-	  if(validMail && validPWD && validUsername){
+	if(validMail && validPWD && validUsername){
 	    setDisabled(false);
-	  } else {
+	} else {
 	    setDisabled(true);
-	  }
+	}
 }

@@ -24,26 +24,22 @@
 		<main>
 			<section>
 				<form method="post" action="/htbin/register.py">
-					<label for="nom">*Last name:</label>
-					<input type="text" name="lastname" id="lastname" required/></br>
-					<label for="nom">*First name:</label>
-					<input type="text" name="firstname" id="firstname" required/></br>
+					<label for="lastname">*Last name:</label>
+					<input type="text" name="lastname" id="lastname" required/><br>
+					<label for="firstname">*First name:</label>
+					<input type="text" name="firstname" id="firstname" required/><br>
 					<label for="birthdate"> Birthdate:</label>
-					<input type="date" name="birthdate" id="birthdate" placeholder="ddmmyyyy"/></br>
-					<label for="nom">*Username:</label>
-					<input type="text" name="username" id="username" required/></br>
-					<label for="nom">*Password:</label>
-					<input type="password" name="userpwd" id="userpwd" required/></br>
-					<label for="nom">*E-Mail : </label>
-					<input type="text" name="useremail" id="useremail" required/></br>
-					<button id="register-btn" disabled=true>REGISTER</button>
+					<input type="date" name="birthdate" id="birthdate"/><br>
+					<label for="username">*Username:</label>
+					<input type="text" name="username" id="username" required/><br>
+					<label for="userpwd">*Password:</label>
+					<input type="password" name="userpwd" id="userpwd" required/><br>
+					<label for="useremail">*E-Mail : </label>
+					<input type="text" name="useremail" id="useremail" required/><br>
+					<button id="register-btn" disabled>REGISTER</button>
 				</form>
 				
 			</section>
-			<aside>
-					<!--<h2>Informations</h2>-->
-			</aside>
-			
 		</main>
 		<footer>
 			<nav id="barreNavBas" class="barreNavBas">
@@ -53,8 +49,8 @@
     					<i class="fa fa-bars"></i>
   				</a>
 			</nav>
-		</footer>	
-		<script type="text/javascript" src="scripts/register.js"></script>
-		<script type="text/javascript" src="scripts/nav.js"></script>	
+		</footer>
+		<script src="scripts/register.js"></script>
+		<script src="scripts/nav.js"></script>	
 	</body>
 </html>
