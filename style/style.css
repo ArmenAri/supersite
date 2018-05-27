@@ -205,7 +205,7 @@ nav .icon {
 }
 
 /*Media querie pour les telephones et les écrans de petite taille*/
-@media screen (max-width: 600px) {
+@media handheld {
 	#title{
 		width: auto;
 		height: auto;
