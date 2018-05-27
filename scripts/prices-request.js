@@ -3,6 +3,10 @@
 *@api : https://min-api.cryptocompare.com/
 *@request / sec : 0.5
 */
+
+/*
+* Déclaration des variables
+*/
 const updateInterval = 10;
 const url = "https://min-api.cryptocompare.com/data/price?";
 const params = ["fsym", "tsyms"]
@@ -14,6 +18,9 @@ var keys = getKeys(JSONFormater(createRequestArray()));
 var values = getValues(JSONFormater(createRequestArray()));
 var prevValues = values;
 
+/*
+* @brief : Envoi de la requete vers le site https://min-api.cryptocompare.com/
+*/
 function request(url) {
 	const req = new XMLHttpRequest();
 	req.open('GET', url, false); 
@@ -26,6 +33,9 @@ function request(url) {
 	}
 }
 
+/*
+* @brief : Creation d'un tableau avec les données à envoyer
+*/
 function createRequestArray() {
 	var array;
 	var to = '';
@@ -45,6 +55,9 @@ function createRequestArray() {
 	return array.split(",");
 }
 
+/*
+* @brief : Transformation du JSON reçu après la requete
+*/
 function JSONFormater(array) {
 	array[0] = array[0].substring(9, array[0].length);
 	var JSONArray = [];
@@ -65,6 +78,9 @@ function JSONCorrector(array, nb) {
 	return str.substring(9, str.length - 1);
 }
 
+/*
+* @brief : Récuperation des clés JSON
+*/
 function getKeys(array) {
 	properties = [];
 	for(var i = 0; i < array.length; i++){
@@ -73,6 +89,9 @@ function getKeys(array) {
 	return properties;
 }
 
+/*
+* @brief : Récuperation des valeurs JSON
+*/
 function getValues(array) {
 	values = [];
 	for(var i = 0; i < array.length; i++){
@@ -81,6 +100,9 @@ function getValues(array) {
 	return values;
 }
 
+/*
+* @brief : Ajout du cryptomonnaies saisie par l'utilisateur
+*/
 function addToBoard() {
     var val = document.getElementById("addtotab").value;
     var canAdd = true;
@@ -98,6 +120,9 @@ function addToBoard() {
 	displayTable();
 }
 
+/*
+* @brief : Affichage du tableau HTML avec les prix des cryptomonnaies
+*/
 function displayTable() {
 	var values = getValues(JSONFormater(createRequestArray()));
 	var str = "<table> \n ";
@@ -135,8 +160,13 @@ function displayTable() {
 	}
 }
 
+
 displayTable();
 setInterval(displayTable, 1000 * updateInterval);
+
+/*
+* Ajout d'un gestionnaire d'evenements sur l'element avec l'ID 'addtotab-btn'
+*/
 var cryptoAddingButton = document.getElementById("addtotab-btn");
 cryptoAddingButton.addEventListener("click", addToBoard, false);
 

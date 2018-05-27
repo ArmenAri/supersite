@@ -2,6 +2,9 @@
 *@author : Armen ARISTAKESYAN, Florian BOUCHUT
 */
 
+/*
+* Expression regulieres utilisés pour verifier la validité des entrées de l'utilisateur
+*/
 var regexPwd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
 var regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
@@ -9,6 +12,9 @@ var validPWD = false;
 var validMail = false;
 var validUsername = false;
 
+/*
+* @brief : Recuperation des saisies par l'utilisateur
+*/
 function getLastName(){
 	return document.getElementById("lastname").value;
 }
@@ -34,15 +40,21 @@ function getBirthDate(){
 }
 
 function setDisabled(b){
-	document.getElementById("register-btn").disabled=b;
+	document.getElementById("register-btn").disabled = b;
 }
 
+/*
+* @brief : Recuperation des elements HTML depuis leurs IDs
+*/
 document.getElementById("username").addEventListener('input', checkInfos);
 document.getElementById("userpwd").addEventListener('input', checkInfos);
 document.getElementById("useremail").addEventListener('input', checkInfos);
 document.getElementById("firstname").addEventListener('input', checkInfos);
 document.getElementById("lastname").addEventListener('input', checkInfos);
 
+/*
+* @brief : Verification de la validités des saisies
+*/
 function checkInfos() {
 	var array = [getLastName(), getFirstName(), getUserName(), getPassword(), getEMail(), getBirthDate()];
 	document.getElementById("firstname").style.color = 'green';

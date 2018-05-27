@@ -30,18 +30,19 @@ main {
 	flex-wrap: wrap;
 }
 
+/* Style de la barre d'information */
 aside {
 	flex: 20%;
 	background-color: #f1f1f1;
 	padding: 20px;
 }
 
+/* Style du section (contient les articles) */
 section {
 	flex: 80%;
 	background-color: #f1f1f1;
 	padding: 20px;
 }
-
 
 article {
 	background-color: #f1f1f1;
@@ -107,6 +108,7 @@ h3 {
 	text-transform: uppercase;
 }
 
+/* Transform pour l'image (TOPCRYPTO)*/
 #top{
 	transition-duration: 5.5s;
 }
@@ -134,12 +136,13 @@ button {
 	transition-duration: 0.8s;
 }
 
-
+/* Bouton actifs*/
 button:hover {
 	background-color: #ffffff;
 	color: #000000;
 }
 
+/* Bouton désactivés*/
 button:disabled {
 	color: #ffffff;
 	background-color: #bababa;
@@ -175,6 +178,7 @@ input {
 	margin: 0 0 5px 0;
 }
 
+/* Barre de navigation*/
 nav {
 	overflow: hidden;
 	background-color: #333;
@@ -240,6 +244,7 @@ nav .icon {
 		text-align: left;
 	}
 
+	/* Styles des elements pouvant causer un bug pour l'affichage sur les écrans de petites tailles */
 	img,
 	table,
 	td,
