@@ -196,12 +196,12 @@ nav a:hover {
 }
 
 .active {
-  background-color: #4CAF50;
-  color: white;
+	background-color: #4CAF50;
+	color: white;
 }
 
 nav .icon {
-  display: none;
+	display: none;
 }
 
 /*Media querie pour les telephones et les écrans de petite taille*/
