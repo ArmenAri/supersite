@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style/style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Cryptocurrency - Home</title>
+	</head>
+	<body>
+		<header>
+			<div id="title">HOME</div>
+		</header>
+		<nav id="barreNavHaut" class="barreNavHaut">
+			<a href="index.html">Home</a>
+			<a href="faq.html">FAQ</a>
+			<a href="contact-us.html">Contact us</a>
+			<a href="register.html">Register</a>
+			<a href="login.html">Login</a>
+			<a href="javascript:void(0);" class="icon" id="iconhaut">
+    				<i class="fa fa-bars"></i>
+  			</a>
+			<script>
+				
+			</script>	
+		</nav>
+		<main>
+			<section>
+				<h1>HomePage</h1>
+				<p>Welcome to the informational website about cryptocurrencies</p>
+				<article>
+					<h3>What is cryptocurrency ?</h3>
+					<p>
+						Cryptocurrency is a digital currency in witch encryption techniques are used<br>
+						to regulate the generation of units of currency and<br>
+						verify the transfer of funds, operationg independently of<br>
+						a central bank.
+					</p>
+				</article>
+				<article>
+					<h3>Price of Cryptocurrencies</h3>
+					<p id="prices"></p>
+					
+				</article>
+				<article>
+					<h3>TOP 18 cryptocurrencies</h3>
+					<figure>
+						<img id="top" src="img/topcrypt.png" alt="topcrypt"/>
+						<figcaption>
+							<i>TOP 18 cryptocurrencies</i>
+						</figcaption>
+					</figure>
+				</article>
+			</section>
+			<aside>
+				<h2><center>Informations</h2>
+				<p>Enter the three first letters of desired cryptocurrency then click on the button below and watch the evolution over the time. (eg.: BCH).
+				</p>
+				<input id="addtotab" name="q" type="text"/>
+				<button id="addtotab-btn">ADD TO TAB</button>
+			</aside>
+
+			</main>
+		<footer>
+			<nav id="barreNavBas" class="barreNavBas">
+				<a href="https://www.facebook.com/100002040193937" target="_blank">Facebook</a>
+				<a href="#" target="_blank">Twitter</a>
+				<a href="javascript:void(0);" class="icon" id="iconbas">
+    					<i class="fa fa-bars"></i>
+  				</a>
+			</nav>
+		</footer>	
+		<script type="text/javascript" src="scripts/prices-request.js"></script>
+		<script type="text/javascript" src="scripts/nav.js"></script>
+	</body>
+</html>
